@@ -40,12 +40,12 @@ Navigate to frontend directory
                 
             cd client
 
-# Install dependencies
+### Install dependencies
           npm install
 
-# Start development server
+### Start development server
           npm run dev
-# Frontend runs at: http://localhost:5173
+### Frontend runs at: http://localhost:5173
 🔑 API Key Setup
 
 ### Visit Mistral AI
