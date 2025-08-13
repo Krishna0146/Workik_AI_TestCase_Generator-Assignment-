@@ -63,15 +63,15 @@ Generate Code: Select summaries to generate full test code
 Create PR: Optionally create a GitHub pull request
 
 ### 📁 Project Structure
-├── backend/
-│   ├── app.py              # Flask application
-│   ├── requirements.txt    # Python dependencies
-│   └── .env               # Environment variables
-├── frontend/
-│   ├── src/               # React components
-│   ├── package.json       # Node dependencies
-│   └── vite.config.js     # Vite configuration
-└── README.md
+        ├── backend/
+        │   ├── app.py              # Flask application
+        │   ├── requirements.txt    # Python dependencies
+        │   └── .env               # Environment variables
+        ├── frontend/
+        │   ├── src/               # React components
+        │   ├── package.json       # Node dependencies
+        │   └── vite.config.js     # Vite configuration
+        └── README.md
 ## 🎯 Key Implementation Highlights
 
 GitHub API Integration: Fetches repository structure and file contents
