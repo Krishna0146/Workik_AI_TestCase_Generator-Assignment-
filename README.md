@@ -15,42 +15,40 @@ Backend: Python Flask + Mistral AI
 Integration: GitHub API, RESTful APIs
 ## 📦 Installation
 Backend Setup
-bash# Clone repository
+### Clone repository
 git clone <your-repo-url>
 cd <repo-name>
 
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
+### Activate virtual environment
 # Windows:
-venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
+Scripts\activate
+Then :
+                  
+          cd server
+### Install dependencies
+          pip install -r requirements.txt
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Setup environment variables
-# Create .env file and add:
+## Setup environment variables
+### Create .env file and add:
 MISTRAL_API_KEY="your_mistral_api_key"
 
-# Run Flask backend
-python app.py
-# Server runs at: http://127.0.0.1:5000
-Frontend Setup
-bash# Navigate to frontend directory
-cd frontend
+### Run Flask backend
+          python app.py
+### Server runs at: http://127.0.0.1:5000
+## Frontend Setup
+Navigate to frontend directory
+                
+            cd client
 
 # Install dependencies
-npm install
+          npm install
 
 # Start development server
-npm run dev
+          npm run dev
 # Frontend runs at: http://localhost:5173
 🔑 API Key Setup
 
-Visit Mistral AI
+### Visit Mistral AI
 Create a free account
 Generate an API key from the dashboard
 Add it to your .env file
