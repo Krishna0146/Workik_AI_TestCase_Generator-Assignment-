@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+}
+
+/* Custom Animations - No separate config needed */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px #6366f1; }
+  100% { box-shadow: 0 0 30px #8b5cf6, 0 0 40px #6366f1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bounceSubtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Custom Classes */
+.glass-effect {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-font {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.shine-effect:hover::before {
+  left: 100%;
+}
+
+/* Custom Tailwind Utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-bounce-subtle {
+  animation: bounceSubtle 2s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
+
+/* Custom Colors as CSS Variables */
+:root {
+  --github-dark: #0d1117;
+  --github-card: #161b22;
+  --github-border: #30363d;
+  --github-accent: #238636;
+  --workik-primary: #6366f1;
+  --workik-secondary: #8b5cf6;
+}
+
+.bg-github-dark { background-color: var(--github-dark); }
+.bg-github-card { background-color: var(--github-card); }
+.border-github-border { border-color: var(--github-border); }
+.text-github-accent { color: var(--github-accent); }
+.bg-workik-primary { background-color: var(--workik-primary); }
+.bg-workik-secondary { background-color: var(--workik-secondary); }
+.text-workik-primary { color: var(--workik-primary); }
+.text-workik-secondary { color: var(--workik-secondary); }
+
+/* Gradient Utilities */
+.bg-workik-gradient {
+  background: linear-gradient(135deg, var(--workik-primary) 0%, var(--workik-secondary) 100%);
+}
+
+.bg-workik-gradient-reverse {
+  background: linear-gradient(135deg, var(--workik-secondary) 0%, var(--workik-primary) 100%);
+}
+
+/* Fix for Tailwind gradient classes using Workik colors */
+.from-workik-primary {
+  --tw-gradient-from: var(--workik-primary) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(99 102 241 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-workik-secondary {
+  --tw-gradient-to: var(--workik-secondary) var(--tw-gradient-to-position);
+}
+
+.from-workik-secondary {
+  --tw-gradient-from: var(--workik-secondary) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(139 92 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-workik-primary {
+  --tw-gradient-to: var(--workik-primary) var(--tw-gradient-to-position);
+}
