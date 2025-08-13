@@ -63,11 +63,11 @@ Generate Code: Select summaries to generate full test code
 Create PR: Optionally create a GitHub pull request
 
 ### 📁 Project Structure
-        ├── backend/
+        ├── server/
         │   ├── app.py              # Flask application
         │   ├── requirements.txt    # Python dependencies
         │   └── .env               # Environment variables
-        ├── frontend/
+        ├── client/
         │   ├── src/               # React components
         │   ├── package.json       # Node dependencies
         │   └── vite.config.js     # Vite configuration
@@ -80,3 +80,6 @@ Framework Detection: Automatically identifies appropriate testing frameworks
 Responsive Design: Clean UI/UX with mobile compatibility
 Error Handling: Comprehensive error management and user feedback
 Security: Environment-based API key management
+
+### Initial User Interface :
+<img width="1870" height="921" alt="Screenshot 2025-08-13 193624" src="https://github.com/user-attachments/assets/093bc893-bfd4-4f70-b2bb-76d724d664ef" />
